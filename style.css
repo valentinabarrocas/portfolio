@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* ocupa toda a tela */
+}
+
+/* List */
+.list {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 14px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* empilha verticalmente */
+  gap: 1px;               /* espaço entre os links */
+  color: #333;
+}
+
+.list a {
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 5px;
+  transition: all 0.3s ease; /* animação suave */
+}
+
+/* efeito quando o mouse passa */
+.list a:hover {
+  color: #e6a5cf;       /* muda a cor */
+  text-decoration: none; /* opcional */
+  transform: scale(1.05); /* aumenta um pouquinho */
+}
+
+/* Nome */
+.title {
+  position: fixed;
+  letter-spacing: 0.08em;
+  bottom: 50px;
+  left: 50px;
+  font-size: 18px; /* tamanho maior para destaque */
+  font-weight: 200;
+  color: #999;
+}
+
+.title a {
+  color: #999;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 5px;
+  transition: all 0.3s ease; /* animação suave */
+}
+
+/* efeito quando o mouse passa */
+.title a:hover {
+  color: #e6a5cf;       /* muda a cor */
+  text-decoration: none; /* opcional */
+  transform: scale(1.05); /* aumenta um pouquinho */
+}
+
+/* Contato */
+.links {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 14px;
+  text-align: right;
+  display: flex;
+  flex-direction: column; /* empilha verticalmente */
+  gap: 1px;               /* espaço entre os links */
+  color: #333;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 5px;
+  transition: all 0.3s ease; /* animação suave */
+}
+
+/* efeito quando o mouse passa */
+.links a:hover {
+  color: #e6a5cf;       /* muda a cor */
+  text-decoration: none; /* opcional */
+  transform: scale(1.05); /* aumenta um pouquinho */
+}
+
+/* About */
+.about {
+  position: absolute;
+  letter-spacing: 0.03em;
+  bottom: 50px;
+  right: 50px;
+  max-width: 500px; /* controla tamanho do bloco de texto */
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: right;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  letter-spacing: 0.04em;
+  bottom: 30px;
+  left: 50px;
+  font-size: 12px; /* tamanho maior para destaque */
+  font-weight: 200;
+  color: #444;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+  transition: all 0.3s ease; /* animação suave */
+  display: inline-block;
+}
+
+/* efeito quando o mouse passa */
+footer a:hover {
+  color: #e6a5cf;       /* muda a cor */
+  text-decoration: none; /* opcional */
+  transform: scale(1.05); /* aumenta um pouquinho */
+}
