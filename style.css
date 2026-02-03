@@ -28,7 +28,7 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
-  font-size: 14px;
+  font-size: 18px;
   text-align: left;
   display: flex;
   flex-direction: column; /* empilha verticalmente */
@@ -45,11 +45,27 @@ body {
   transition: all 0.3s ease; /* animação suave */
 }
 
+/* O símbolo + sempre rosa, depois do nome, com fonte diferente */
+.list a::after {
+  content: "+";
+  margin-left: 8px; /* Espaço entre o nome e o sinal */
+  color: #e6a5cf !important; /* Sempre rosa */
+  font-size: 1.2em; /* Um pouco maior para destacar */
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* Quando o projeto estiver aberto (classe que o JS vai aplicar) */
+.list a.active::after {
+  content: "-";
+}
+
 /* efeito quando o mouse passa */
 .list a:hover {
   color: #e6a5cf;       /* muda a cor */
   text-decoration: none; /* opcional */
   transform: scale(1.05); /* aumenta um pouquinho */
+  text-underline-offset: 4px;
 }
 
 /* Nome */
@@ -84,7 +100,7 @@ body {
   position: absolute;
   top: 50px;
   right: 50px;
-  font-size: 14px;
+  font-size: 18px;
   text-align: right;
   display: flex;
   flex-direction: column; /* empilha verticalmente */
@@ -116,7 +132,7 @@ body {
   right: 50px;
   max-width: 500px; /* controla tamanho do bloco de texto */
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 18px;
   text-align: right;
   color: #333;
 }
@@ -235,8 +251,8 @@ footer a:hover {
     display: block;
     width: fit-content;
     margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 1000;
   }
 
   /* Alinhamentos específicos de margem */
