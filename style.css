@@ -147,3 +147,115 @@ footer a:hover {
   text-decoration: none; /* opcional */
   transform: scale(1.05); /* aumenta um pouquinho */
 }
+
+@media (max-width: 1024px) {
+  /* 1. Container Principal */
+  .home {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 30px; 
+    position: relative;
+    overflow-x: hidden;
+    gap: 0;
+  }
+
+  /* Reset de posicionamento */
+  .list, .links, .about, .title, footer, .gallery {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  /* 2. SUPERIOR DIREITA: Links de contato */
+  .links {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right;
+  }
+
+  /* 3. SUPERIOR ESQUERDA: Lista de projetos */
+  .list {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+  }
+
+  /* 4. MEIO DIREITA: Galeria */
+  .gallery {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-bottom: 60px;
+  }
+
+  /* 5. INFERIOR DIREITA: Nome/Título */
+  .title {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  /* 6. INFERIOR DIREITA: Descrição (Entre Título e Footer) */
+  .about {
+    order: 5;
+    text-align: right;
+    align-self: flex-end;
+    max-width: 85%;
+    margin-bottom: 40px;
+  }
+
+  /* 7. INFERIOR DIREITA: Rodapé */
+  footer {
+    order: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  /* ESTILIZAÇÃO DOS LINKS E TEXTOS */
+  .links a, .list a, .title a, footer a {
+    color: #e6a5cf !important;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  /* Alinhamentos específicos de margem */
+  .links a, .title a, footer a {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .list a {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .links a span {
+    display: none;
+  }
+
+  footer p {
+    color: #444;
+    margin-bottom: 5px;
+  }
+}
