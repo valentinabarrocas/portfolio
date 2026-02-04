@@ -1,277 +1,217 @@
+/* --- base --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background: #fff;
   color: #333;
+  overflow-x: hidden;
 }
 
+/* --- main --- */
 .home {
   position: relative;
   width: 100vw;
-  height: 100vh; /* ocupa toda a tela */
+  height: 100vh;
+  min-height: 650px;
+  padding: 4vw;
 }
 
-/* List */
+/* --- font --- */
+.list, .links, .title, .about {
+  font-size: clamp(16px, 1.1vw, 22px);
+}
+
+/* --- animação --- */
+.list a, .links a, .title a, footer a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.list a:hover, 
+.links a:hover, 
+.title a:hover, 
+footer a:hover {
+  color: #e6a5cf !important;
+  transform: scale(1.05);
+}
+
+/* --- list --- */
 .list {
   position: absolute;
-  top: 50px;
-  left: 50px;
-  font-size: 18px;
-  text-align: left;
+  top: 4vw;
+  left: 4vw;
   display: flex;
-  flex-direction: column; /* empilha verticalmente */
-  gap: 1px;               /* espaço entre os links */
-  color: #333;
+  flex-direction: column;
+  gap: 0.5vh;
+  z-index: 20;
 }
 
 .list a {
   color: #333;
-  text-decoration: none;
   letter-spacing: 0.04em;
-  display: block;
-  margin-bottom: 5px;
-  transition: all 0.3s ease; /* animação suave */
 }
 
-/* O símbolo + sempre rosa, depois do nome, com fonte diferente */
 .list a::after {
   content: "+";
-  margin-left: 8px; /* Espaço entre o nome e o sinal */
-  color: #e6a5cf !important; /* Sempre rosa */
-  font-size: 1.2em; /* Um pouco maior para destacar */
+  margin-left: 8px;
+  color: #e6a5cf !important;
   font-weight: bold;
-  vertical-align: middle;
 }
 
-/* Quando o projeto estiver aberto (classe que o JS vai aplicar) */
 .list a.active::after {
   content: "-";
 }
 
-/* efeito quando o mouse passa */
-.list a:hover {
-  color: #e6a5cf;       /* muda a cor */
-  text-decoration: none; /* opcional */
-  transform: scale(1.05); /* aumenta um pouquinho */
-  text-underline-offset: 4px;
+/* --- galeria --- */
+.gallery {
+  position: absolute;
+  top: 12vw;
+  left: 4vw;
+  width: 50vw;
+  max-width: 1200px;
+  z-index: 5;
 }
 
-/* Nome */
+.project-content img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* --- links --- */
+.links {
+  position: absolute;
+  top: 4vw;
+  right: 4vw;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  z-index: 20;
+}
+
+/* --- title --- */
 .title {
-  position: fixed;
-  letter-spacing: 0.08em;
-  bottom: 50px;
-  left: 50px;
-  font-size: 18px; /* tamanho maior para destaque */
-  font-weight: 200;
-  color: #999;
+  position: absolute;
+  bottom: 6vw;
+  left: 4vw;
+  z-index: 20;
 }
 
 .title a {
   color: #999;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  display: block;
-  margin-bottom: 5px;
-  transition: all 0.3s ease; /* animação suave */
+  font-weight: 200;
 }
 
-/* efeito quando o mouse passa */
-.title a:hover {
-  color: #e6a5cf;       /* muda a cor */
-  text-decoration: none; /* opcional */
-  transform: scale(1.05); /* aumenta um pouquinho */
-}
-
-/* Contato */
-.links {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  font-size: 18px;
-  text-align: right;
-  display: flex;
-  flex-direction: column; /* empilha verticalmente */
-  gap: 1px;               /* espaço entre os links */
-  color: #333;
-}
-
-.links a {
-  color: #333;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  display: block;
-  margin-bottom: 5px;
-  transition: all 0.3s ease; /* animação suave */
-}
-
-/* efeito quando o mouse passa */
-.links a:hover {
-  color: #e6a5cf;       /* muda a cor */
-  text-decoration: none; /* opcional */
-  transform: scale(1.05); /* aumenta um pouquinho */
-}
-
-/* About */
+/* --- about --- */
 .about {
   position: absolute;
-  letter-spacing: 0.03em;
-  bottom: 50px;
-  right: 50px;
-  max-width: 500px; /* controla tamanho do bloco de texto */
+  bottom: 4vw;
+  right: 4vw;
+  max-width: 35vw;
   line-height: 1.5;
-  font-size: 18px;
   text-align: right;
-  color: #333;
+  z-index: 20;
 }
 
-/* Footer */
+/* --- footer --- */
 footer {
-  position: fixed;
-  letter-spacing: 0.04em;
-  bottom: 30px;
-  left: 50px;
-  font-size: 12px; /* tamanho maior para destaque */
-  font-weight: 200;
-  color: #444;
-}
-
-footer a {
+  position: absolute;
+  bottom: 3.5vw;
+  left: 4vw;
+  font-size: clamp(10px, 0.7vw, 14px);
   color: #999;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  margin-bottom: 5px;
-  transition: all 0.3s ease; /* animação suave */
-  display: inline-block;
 }
 
-/* efeito quando o mouse passa */
-footer a:hover {
-  color: #e6a5cf;       /* muda a cor */
-  text-decoration: none; /* opcional */
-  transform: scale(1.05); /* aumenta um pouquinho */
-}
-
+/* --- mobile --- */
 @media (max-width: 1024px) {
-  /* 1. Container Principal */
   .home {
+    height: auto;
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    padding: 40px 30px; 
-    position: relative;
-    overflow-x: hidden;
-    gap: 0;
+    padding: 10vw 6vw;
   }
 
-  /* Reset de posicionamento */
   .list, .links, .about, .title, footer, .gallery {
     position: relative !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    width: 100%;
-    margin-bottom: 50px;
-  }
-
-  /* 2. SUPERIOR DIREITA: Links de contato */
-  .links {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-    text-align: right;
-  }
-
-  /* 3. SUPERIOR ESQUERDA: Lista de projetos */
-  .list {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    text-align: left;
-  }
-
-  /* 4. MEIO DIREITA: Galeria */
-  .gallery {
-    order: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-    margin-bottom: 60px;
-  }
-
-  /* 5. INFERIOR DIREITA: Nome/Título */
-  .title {
-    order: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    margin-bottom: 20px;
-  }
-
-  /* 6. INFERIOR DIREITA: Descrição (Entre Título e Footer) */
-  .about {
-    order: 5;
-    text-align: right;
-    align-self: flex-end;
-    max-width: 85%;
+    width: 100% !important;
+    max-width: 100%;
     margin-bottom: 40px;
   }
 
-  /* 7. INFERIOR DIREITA: Rodapé */
-  footer {
-    order: 6;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    margin-bottom: 20px;
+  /* links mobile */
+  .links {
+    order: 1;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 15px;
   }
 
-  /* ESTILIZAÇÃO DOS LINKS E TEXTOS */
-  .links a, .list a, .title a, footer a {
+  .links a {
+    font-size: 18px !important;
+    font-weight: 800;
     color: #e6a5cf !important;
-    text-decoration: none;
-    display: block;
-    width: fit-content;
-    margin-bottom: 15px;
-    font-size: 30px;
-    font-weight: 1000;
   }
 
-  /* Alinhamentos específicos de margem */
-  .links a, .title a, footer a {
-    margin-left: auto;
-    margin-right: 0;
+  .links a span { 
+    display: none; 
+  } /* links */
+
+  .list { 
+    order: 2; 
+    align-items: flex-start; 
+    text-align: left; 
   }
 
-  .list a {
-    margin-left: 0;
-    margin-right: auto;
+  .list a { 
+    font-size: 28px !important; 
+    font-weight: 900; 
+    color: #e6a5cf !important; 
   }
 
-  .links a span {
-    display: none;
+  .gallery { 
+    order: 3; 
+    margin: 20px 0; 
   }
 
-  footer p {
-    color: #444;
-    margin-bottom: 5px;
+  .title { 
+    order: 4; 
+    text-align: right; 
+    margin-bottom: 10px; 
+  }
+
+  .title a { 
+    font-size: 24px !important; 
+    font-weight: 800; 
+    color: #e6a5cf !important; 
+  }
+
+  .about { 
+    order: 5; 
+    text-align: right; 
+  }
+
+  footer { 
+    order: 6; 
+    text-align: right; 
+  }
+
+  footer a { 
+    color: #e6a5cf !important; 
+    font-weight: bold; 
   }
 }
