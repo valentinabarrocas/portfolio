@@ -168,6 +168,7 @@ footer {
     margin-bottom: 30px; 
     top: auto; 
     right: auto;
+    display: flex;
   }
 
   .links a span { 
@@ -180,6 +181,16 @@ footer {
     color: #e6a5cf !important; 
   }
 
+  /* list esquerda no mobile */
+.list { 
+  order: 2; 
+  position: relative !important; 
+  text-align: left; 
+  top: auto; 
+  left: auto; 
+  margin-bottom: 20px;
+ }
+
   /* list esquerda */
   .list { 
     order: 2; 
@@ -190,10 +201,16 @@ footer {
     margin-bottom: 20px;
   }
 
-  .list a { 
+  .list a list a:not(.project-url){ 
     font-size: 26px !important; 
-    color: #e6a5cf !important; 
+    color: #666 !important;
+    display: inline-block;
   }
+  
+
+  .list a::after {
+  color: #e6a5cf !important;
+ }
 
   /* title direita */
   .title { 
@@ -243,8 +260,10 @@ footer {
   }
 
   .info-link { 
-    font-size: 14px !important; 
+    font-size: 12px !important; 
+    color: #e6a5cf !important;
     display: block; 
     margin-top: 10px; 
   }
+
 }
