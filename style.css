@@ -276,3 +276,116 @@ footer {
   }
 
 }
+
+/* dark mode implementado */
+
+/* definição de cores */
+:root {
+  --bg: #ffffff;
+  --texto-corpo: #444;
+  --texto-suave: #999;
+  --texto-detalhe: #666;
+  --rosa: #e6a5cf;
+  --linhas: #ccc;
+}
+
+/* auto dark mode  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --linhas: #333;
+    --texto-corpo: #e0e0e0;
+    --texto-suave: #888;
+    --texto-detalhe: #aaa;
+    --rosa: #ffb7e2;
+  }
+  
+  img, video {
+    filter: brightness(.8) contrast(1.1);
+    transition: filter 0.4s ease;
+  }
+  img:hover, video:hover { filter: brightness(1); }
+}
+
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* troca #fff e #444 pelas variáveis */
+  background: var(--bg);
+  color: var(--texto-corpo); 
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.title a {
+  color: var(--texto-suave) !important;
+}
+
+/* hover e links */
+.list a, .links a, .title a, footer a, .info-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.list a:hover, .links a:hover, .title a:hover, footer a:hover, .info-link:hover {
+  color: var(--rosa) !important;
+  transform: scale(1.05);
+}
+
+.list a::after { 
+  content: "+"; 
+  margin-left: 10px; 
+  color: var(--rosa); 
+}
+
+.info-year { 
+  font-size: clamp(12px, 0.8vw, 16px);
+  color: var(--texto-detalhe); 
+  display: block; 
+  margin-bottom: 15px; 
+}
+
+.info-link { 
+  font-size: clamp(12px, 0.8vw, 16px);
+  color: var(--texto-suave); 
+  word-break: break-all; 
+}
+
+footer { 
+  position: absolute; 
+  bottom: 2vw; 
+  left: 4vw; 
+  font-size: 12px; 
+  color: var(--texto-suave); 
+}
+
+/* mobile */
+@media (max-width: 1024px) {
+  .links { 
+    border-bottom: 1px solid var(--linhas);
+    padding-bottom: 20px;
+  }
+
+  .links a { 
+    color: var(--rosa) !important; 
+  }
+
+  .title { 
+    border-top: 1px solid var(--linhas);
+  }
+
+  .title a { 
+    font-size: 24px !important; 
+    color: var(--rosa) !important;
+    font-weight: 600; 
+  }
+}
