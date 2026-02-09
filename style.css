@@ -219,7 +219,8 @@ footer {
 
   /* title direita */
   .title { 
-    order: 3; position: relative !important; 
+    order: 3; 
+    position: relative !important; 
     text-align: right; 
     margin-top: auto; 
     padding-top: 40px; 
@@ -236,7 +237,7 @@ footer {
     font-weight: 600; 
   }
 
-  /* about esquerda */
+  /* about direita */
   .about { 
     order: 4; 
     position: relative !important; 
@@ -250,12 +251,13 @@ footer {
 
   /* footer direita */
   footer { 
-    order: 5; 
-    position: relative !important; 
-    text-align: right; 
-    bottom: auto; 
-    left: auto; 
-    padding: 40px 0 20px 0;
+   order: 5; 
+   position: relative !important; 
+   text-align: right; 
+   width: 100%; 
+   padding-top: 40px;
+   left: auto !important; 
+   bottom: auto !important;
   }
 
   /* ajuste list projects */
