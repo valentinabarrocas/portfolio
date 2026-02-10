@@ -1,4 +1,4 @@
-# Valentina Barrocas — Portfolio
+# Valentina Barrocas - Portfolio
 
 Portfólio pessoal focado na intersecção entre design editorial, arte interativa e desenvolvimento front-end. O projeto foi construído com uma estética minimalista, priorizando a legibilidade e a exposição visual dos projetos como em um museu de arte.
 
