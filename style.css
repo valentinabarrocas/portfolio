@@ -47,7 +47,7 @@ body {
   transform: scale(1.05);
 }
 
-/* list (projects) */
+/* list (projetos) */
 .list {
   position: absolute;
   top: 4vw;
@@ -133,7 +133,7 @@ body {
   word-break: break-all; 
 }
 
-/* desktop absolute */
+/* desktop */
 .links { 
   position: absolute; 
   top: 4vw; 
