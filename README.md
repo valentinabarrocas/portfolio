@@ -1,4 +1,4 @@
-# Valentina Barrocas - Portfolio
+# Valentina Barrocas - Portfólio
 
 Portfólio pessoal focado na intersecção entre desenvolvimento front-end, UX/UI design e creative coding. O projeto foi construído com uma estética minimalista, priorizando a legibilidade e a exposição visual dos projetos como em um museu de arte.
 
