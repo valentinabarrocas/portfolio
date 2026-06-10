@@ -10,8 +10,8 @@ portfólio pessoal focado na intersecção entre desenvolvimento front-end, desi
 ## dark mode
 o site conta com implementação de **dark mode automático** via css, respeitando as preferências de tema do sistema operacional do usuário.
 
-- **cores light (anteriormente):** fundo branco com textos em tons de cinza grafite e destaques em rosa.
-- **cores light (atualmente):** fundo rosa com textos em preto e destaques em cinza grafite.
+- **cores light (anteriormente):** fundo branco com textos em tons de cinza e destaques em rosa.
+- **cores light (atualmente):** fundo rosa com textos em preto e destaques em tons de cinza.
 - **cores dark:** fundo "off-black" com textos e destaques em rosa.
 
 ## responsividade

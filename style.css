@@ -297,10 +297,10 @@ footer {
   :root {
     --bg: #111111;
     --linhas: #333;
-    --texto-corpo: #ffb7e2;
-    --texto-suave: #ffb7e2;
-    --texto-detalhe: #ffb7e2;
-    --rosa: #ffb7e2;
+    --texto-corpo: #e6a5cf;
+    --texto-suave: #e6a5cf;
+    --texto-detalhe: #e6a5cf;
+    --rosa: #e6a5cf;
   }
   
   img, video {
