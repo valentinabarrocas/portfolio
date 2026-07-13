@@ -6,14 +6,17 @@
 
   <title>valentinabarrocas</title>
 
-  <meta
-    name="description"
-    content="valentinabarrocas - direção criativa, curadoria e criação de conteúdo, direção de fotografia e pesquisa em arte, cultura visual, mídias digitais, interfaces experimentais e acessibilidade."
-  />
+<!-- seo -->
+<meta name="description" content="direção criativa + design e desenvolvimento de interfaces + pesquisa em imagem, memória e cultura visual + produção de conteúdo multimídia" />
+<meta name="author" content="valentinabarrocas" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://valentinabarrocas.com" />
+
 
   <link rel="stylesheet" href="style.css" />
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><style>text{fill:%23000}@media(prefers-color-scheme:dark){text{fill:%23e6a5cf}}</style><text y=%22.9em%22 font-size=%2290%22>❦</text></svg>">
-  
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
@@ -23,88 +26,93 @@
 
   <main class="home">
 
-    <!-- lista de projetos -->
+    <!-- categorias e projetos esquerda superior -->
 <section class="list">
 
-  <div class="project-item">
-    <a href="#" class="project-link" data-project="patrimonio"><strong>pesquisa:</strong> fotografia analógica como patrimônio cultural</a>
-    
-    <div id="patrimonio" class="project-content" style="display:none">
-      <div class="project-inner">
-        <img src="" alt="" class="project-image">
-        
-        <aside class="project-info">
-          <h2 class="info-title">fotografia analógica como patrimônio cultural</h2>
-          <span class="info-year">2026</span>
-          <p class="info-desc">
-            a pesquisa investiga a fotografia analógica como patrimônio cultural imaterial na era digital. artigo aceito para apresentação no 9º simpósio científico do icomos brasil.
-          </p>
-          
-        </aside>
-      </div>
-    </div>
+<div class="project-item">
+  <a href="#" class="project-link" data-category="pesquisa">pesquisa</a>
+
+  <div id="pesquisa-patrimonio" class="project-content" data-category="pesquisa">
+    <img src="" alt="" class="project-image">
+    <h2 class="info-title">fotografia analógica como patrimônio cultural</h2>
+    <span class="info-year">2026</span>
+    <p class="info-desc">
+      a pesquisa investiga a fotografia analógica como patrimônio cultural imaterial na era digital. artigo aceito para apresentação no 9º simpósio científico do icomos brasil (unesco).
+    </p>
   </div>
-  
+
+  <div id="pesquisa-digicam" class="project-content" data-category="pesquisa">
+    <img src="nostalgia.jpg" alt="" class="project-image">
+    <h2 class="info-title">o retorno das câmeras digitais compactas como tendência</h2>
+    <span class="info-year">2025</span>
+    <p class="info-desc">
+      a pesquisa investiga o retorno da estética fotográfica das câmeras digitais compactas (digicams) no contemporaneidade. 
+    </p>
+  </div>
+
+  <div id="pesquisa-acessibilidade" class="project-content" data-category="pesquisa">
+    <img src="" alt="" class="project-image">
+    <h2 class="info-title">acessibilidade cultural em plataforma de streaming audiovisual</h2>
+    <span class="info-year">2020</span>
+    <p class="info-desc">
+      a pesquisa investiga a acessibilidade para o público surdo por meio de legendas em produções audiovisuais em plataforma de streaming. 
+    </p>
+  </div>
+</div>
+
   <div class="project-item">
-    <a href="#" class="project-link" data-project="portfolio"><strong>ui design & desenvolvimento front-end:</strong> portfólio</a>
-    
-    <div id="portfolio" class="project-content" style="display:none">
-      <div class="project-inner">
-        <img src="portfolio.png" alt="imagem com o mockup do portfólio, em um macbook e sobre um fundo rosa." class="project-image">
-        
-        <aside class="project-info">
-          <h2 class="info-title">portfólio "museum concept"</h2>
-          <span class="info-year">2026</span>
-          <p class="info-desc">
-            portfólio pessoal prototipado no figma e desenvolvido com html, css e javascript. com design pensando para ser único e lembrar a exposição de uma obra de arte em museu digital.
-          </p>
-          <a href="https://github.com/valentinabarrocas/portfolio" class="info-link" target="_blank" rel="noopener noreferrer">https://github.com/valentinabarrocas/portfolio</a>
-        </aside>
-      </div>
+    <a href="#" class="project-link" data-category="interface">ui design & desenvolvimento front-end</a>
+
+    <div id="interface-portfolio" class="project-content" data-category="interface">
+      <img src="portfolio.png" alt="imagem com o mockup do portfólio, em um macbook e sobre um fundo rosa." class="project-image">
+      <h2 class="info-title">portfólio https://valentinabarrocas.com</h2>
+      <span class="info-year">2026</span>
+      <p class="info-desc">
+        portfólio pessoal prototipado no figma e desenvolvido com html, css e javascript, sem frameworks ou templates prontos. <br>o design foi pensado para ser único, transformando a navegação em uma experiência que remete à exposição de uma obra de arte em um museu digital. código-fonte disponível no link abaixo.
+      </p>
+      <a href="https://github.com/valentinabarrocas/portfolio" class="info-link" target="_blank" rel="noopener noreferrer">https://github.com/valentinabarrocas/portfolio</a>
     </div>
   </div>
 
   <div class="project-item">
-  <a href="#" class="project-link" data-project="animacao"><strong>motion design & ilustração:</strong> animação frame-a-frame</a>
-    
-    <div id="animacao" class="project-content" style="display:none">
-      <div class="project-inner">
-        <video autoplay loop muted playsinline class="project-image">
-          <source src="animacao.mp4" type="video/mp4">
-          seu navegador não suporta vídeos.
-        </video>
-        
-        <aside class="project-info">
-          <h2 class="info-title">animação frame-a-frame</h2>
-          <span class="info-year">2018</span>
-          <p class="info-desc">
-            projeto de animação 2d desenvolvido no photoshop, quadro a quadro e utilizando a técnica onion skinning. o projeto explora a ilustração manual aplicada ao meio digital.
-          </p>
-        </aside>
-      </div>
+    <a href="#" class="project-link" data-category="motion">motion design & ilustração</a>
+
+    <div id="motion-ilustra" class="project-content" data-category="motion">
+      <video autoplay loop muted playsinline class="project-image">
+        <source src="animacao.mp4" type="video/mp4">
+        seu navegador não suporta vídeos.
+      </video>
+      <h2 class="info-title">animação frame-a-frame</h2>
+      <span class="info-year">2018</span>
+      <p class="info-desc">
+        animação 2d desenvolvida à mão, quadro a quadro, no photoshop. <br>cada frame foi desenhado individualmente utilizando a técnica de onion skinning, que permite visualizar os quadros anteriores como referência para manter a continuidade do movimento.
+      </p>  
     </div>
   </div>
 
 </section>
 
-    <!-- title -->
+    <!-- projetos centro -->
+    <div id="project-viewer" class="project-viewer"></div>
+
+    <!-- title esquerda inferior -->
     <div class="title">
       <h1><a href="index.html">valentinabarrocas</a></h1>
     </div>
 
-    <!-- links -->
+    <!-- links direita superior-->
     <nav class="links">
       <a href="mailto:contato@valentinabarrocas.com">contato<span>@valentinabarrocas.com</span></a>
     </nav>
 
-    <!-- about -->
+    <!-- about direita inferior-->
     <section class="about">
       <p>
-        direção criativa, curadoria e criação de conteúdo, direção de fotografia e pesquisa em arte, cultura visual, mídias digitais, interfaces experimentais e acessibilidade.
+        criativa multidisciplinar + produtora multimídia + especialista em artes + pesquisadora em imagem, memória e cultura visual + foto, vídeo, design, escrita e código.
       </p>
     </section>
 
-    <!-- footer -->
+    <!-- footer esquerda inferior-->
     <footer>
       <p>created by <a href="http://valentinabarrocas.com">valentinabarrocas</a></p>
     </footer>
