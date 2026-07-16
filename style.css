@@ -24,7 +24,7 @@ body {
 
 /* desktop font */
 .list, .links, .title, .about {
-  font-size: clamp(18px, 1.2vw, 48px);
+  font-size: clamp(14px, 0.6vw, 32px);
   line-height: 1.4;
   letter-spacing: 0.02em;
 }
@@ -81,6 +81,7 @@ body {
 }
 
 .title h1 {
+  font-size: clamp(32px, 0.6vw, 32px);
   line-height: 1;
 }
 
@@ -130,13 +131,21 @@ body {
   gap: 0.5vw;
 }
 
+.project-content img, .project-content video {
+  width: 100%;
+  height: auto;
+  display: block;
+  order: 3;
+  margin-bottom: 1vw;
+}
+
 .info-title { 
-  font-size: clamp(18px, 1.2vw, 26px);
+  font-size: clamp(14px, 0.6vw, 32px);
   order: 1;
 }
 
 .info-year { 
-  font-size: clamp(12px, 0.8vw, 16px);
+  font-size: clamp(12px, 0.6vw, 24px);
   color: var(--cinza);
   order: 2;
 }
@@ -149,13 +158,13 @@ body {
 }
 
 .info-desc { 
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(14px, 0.6vw, 32px);
   line-height: 1.5;
   order: 4;
 }
 
 .info-link { 
-  font-size: clamp(12px, 0.8vw, 16px);
+  font-size: clamp(12px, 0.6vw, 32px);
   color: var(--cinza); 
   word-break: break-all;
   order: 5;
@@ -190,7 +199,7 @@ footer {
   bottom: 1.2vw; 
   left: 4vw; 
   width: var(--col-w);
-  font-size: 12px; 
+  font-size: 10px; 
   color: var(--cinza); 
   z-index: 20;
 }
@@ -236,7 +245,7 @@ footer {
   }
 
   .links a { 
-    font-size: 16px !important; 
+    font-size: 14px !important; 
     font-weight: 700; 
     color: var(--preto) !important; 
   }
@@ -277,9 +286,9 @@ footer {
   }
 
   .title a { 
-    font-size: 24px !important; 
+    font-size: 32px !important; 
     color: var(--preto) !important;
-    font-weight: 600; 
+    font-weight: 200; 
   }
 
   .about { 
@@ -290,7 +299,7 @@ footer {
     text-align: right; 
     max-width: 100%; 
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .info-link { 
@@ -315,7 +324,7 @@ footer {
 @media (prefers-color-scheme: dark) {
   :root {
   --rosa: #111;
-  --cinza: #fff;
+  --cinza: #555;
   --preto: #e6a5cf;
   }
   

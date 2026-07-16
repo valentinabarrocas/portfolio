@@ -16,7 +16,7 @@ links.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault(); // impede a página de pular pro topo
 
-        const categoria = link.getAttribute('data-category');
+        const categoria = link.getAttribute('data-project');
         const jaEstaAtivo = link.classList.contains('active');
 
         // remove o estado "active" de todos os links (reseta o + / − de todos)
@@ -31,7 +31,7 @@ links.forEach(link => {
                 link.classList.add('active');
 
                 const projetosDaCategoria = document.querySelectorAll(
-                    `.project-content[data-category="${categoria}"]`
+                    `.project-content[data-project="${categoria}"]`
                 );
 
                 projetosDaCategoria.forEach(projeto => {
@@ -44,7 +44,7 @@ links.forEach(link => {
 
             todosConteudos.forEach(conteudo => {
                 const linkOriginal = document.querySelector(
-                    `.project-link[data-category="${conteudo.dataset.category}"]`
+                    `.project-link[data-project="${conteudo.dataset.project}"]`
                 );
 
                 if (!linkOriginal) return;
@@ -60,7 +60,7 @@ links.forEach(link => {
                 link.classList.add('active');
 
                 const projetosDaCategoria = document.querySelectorAll(
-                    `.project-content[data-category="${categoria}"]`
+                    `.project-content[data-project="${categoria}"]`
                 );
 
                 projetosDaCategoria.forEach(projeto => {
@@ -69,4 +69,36 @@ links.forEach(link => {
             }
         }
     });
+});
+
+// ===== mantém o layout coerente ao cruzar o breakpoint mobile/desktop durante um resize =====
+
+let estavaMobile = isMobile();
+
+window.addEventListener('resize', () => {
+    const agoraMobile = isMobile();
+
+    // só age se realmente cruzou o breakpoint (evita rodar a cada pixel de resize)
+    if (agoraMobile !== estavaMobile) {
+        estavaMobile = agoraMobile;
+
+        // fecha tudo e reseta os links ativos
+        links.forEach(l => l.classList.remove('active'));
+        todosConteudos.forEach(c => c.classList.remove('is-open'));
+
+        // devolve cada conteúdo pro seu project-item original
+        todosConteudos.forEach(conteudo => {
+            const linkOriginal = document.querySelector(
+                `.project-link[data-project="${conteudo.dataset.project}"]`
+            );
+
+            if (!linkOriginal) return;
+
+            const itemOriginal = linkOriginal.closest('.project-item');
+
+            if (conteudo.parentElement !== itemOriginal) {
+                itemOriginal.appendChild(conteudo);
+            }
+        });
+    }
 });

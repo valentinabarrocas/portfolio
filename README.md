@@ -1,26 +1,27 @@
-# valentinabarrocas — portfólio
+# portfólio: valentinabarrocas
 
-portfólio pessoal com estética minimalista, inspirado no conceito de exposição em um museu digital: cada projeto é apresentado como uma peça em catálogo, com título, ano e descrição. a identidade visual fica por conta da cor de fundo e detalhes em rosa.
+portfólio pessoal minimalista, inspirado na ideia de exposição em um museu digital. cada projeto aparece como uma peça de catálogo: título, ano e descrição.
 
 ## tecnologias
+
 - html
 - css
-- javascript 
+- javascript
 
 ## estrutura
-o site organiza os projetos por categoria (pesquisa, ui design & desenvolvimento front-end, motion design & ilustração). ao clicar em uma categoria, os projetos correspondentes são exibidos dinamicamente via javascript.
 
-- **desktop:** layout de três colunas fixas: categorias, title e footer à esquerda, projeto selecionado ao centro, contato e sobre à direita.
-- **mobile:** navegação em acordeão: os projetos expandem diretamente abaixo da categoria selecionada.
+os projetos são listados em ordem cronológica. ao clicar em um projeto, o conteúdo é exibido dinamicamente via javascript.
+
+- **desktop:** três colunas fixas — lista de projetos/título/footer à esquerda, projeto selecionado ao centro, contato/sobre à direita.
+- **mobile:** acordeão — o projeto expande abaixo do item selecionado.
 
 ## dark mode
-o site conta com implementação de **dark mode automático** via css, respeitando as preferências de tema do sistema operacional do usuário.
 
-- **cores light:** fundo rosa com textos e destaques em preto.
-- **cores dark:** fundo "off-black" com textos e destaques em rosa.
+tema automático via css, seguindo a preferência do sistema.
+
+- **light:** fundo rosa, textos em preto e detalhes em cinza.
+- **dark:** fundo off-black, textos em rosa e detalhes em cinza.
 
 ## responsividade
-layout responsivo com ajustes específicos de estrutura, tipografia e comportamento para dispositivos mobile, garantindo que a experiência de navegação seja fluida tanto em desktops quanto em telas menores.
 
-## seo
-metadados otimizados para indexação.
+layout, tipografia e navegação se adaptam para desktop e mobile.
