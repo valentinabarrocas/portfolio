@@ -12,8 +12,8 @@ portfólio pessoal minimalista, inspirado na ideia de exposição em um museu di
 
 os projetos são listados em ordem cronológica. ao clicar em um projeto, o conteúdo é exibido dinamicamente via javascript.
 
-- **desktop:** três colunas fixas — lista de projetos/título/footer à esquerda, projeto selecionado ao centro, contato/sobre à direita.
-- **mobile:** acordeão — o projeto expande abaixo do item selecionado.
+- **desktop:** três colunas fixas - lista de projetos, título e footer à esquerda, projeto selecionado ao centro, contato/sobre à direita.
+- **mobile:** acordeão - o projeto expande abaixo do item selecionado.
 
 ## dark mode
 

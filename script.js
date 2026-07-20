@@ -1,4 +1,4 @@
-// seleciona todos os links de categoria (pesquisa, interface, motion...)
+// seleciona todos os links de projetos
 const links = document.querySelectorAll('.project-link');
 
 // container central onde os projetos aparecem no desktop
@@ -7,7 +7,7 @@ const viewer = document.getElementById('project-viewer');
 // cacheia todos os project-content uma única vez
 const todosConteudos = document.querySelectorAll('.project-content');
 
-// breakpoint precisa bater com o @media (max-width: 1024px) do CSS
+// breakpoint precisa bater com o @media (max-width: 1024px) do css
 function isMobile() {
     return window.innerWidth <= 1024;
 }
@@ -78,7 +78,7 @@ let estavaMobile = isMobile();
 window.addEventListener('resize', () => {
     const agoraMobile = isMobile();
 
-    // só age se realmente cruzou o breakpoint (evita rodar a cada pixel de resize)
+    // só age se realmente cruzou o breakpoint
     if (agoraMobile !== estavaMobile) {
         estavaMobile = agoraMobile;
 
