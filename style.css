@@ -57,6 +57,12 @@ body {
   z-index: 20;
 }
 
+.list-label {
+  font-size: clamp(12px, 0.6vw, 24px);
+  color: var(--cinza);
+  margin-bottom: 0.5vh;
+}
+
 .list a { 
   font-weight: 500; 
 }
@@ -260,7 +266,7 @@ footer {
   .links a { 
     font-size: 14px !important; 
     font-weight: 700; 
-    color: var(--preto) !important; 
+    color: var(--cinza) !important; 
   }
 
   .list { 
@@ -315,11 +321,17 @@ footer {
     font-size: 14px;
   }
 
+ .info-title, .info-year, .info-desc, .project-content a {
+  color: var(--cinza) !important;
+}
+
+
   .info-link { 
     font-size: 14px !important; 
     color: var(--preto) !important;
     display: block; 
     margin-top: 10px; 
+    color: var(--cinza);
   }
 
   footer { 
