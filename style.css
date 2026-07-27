@@ -34,14 +34,14 @@ body {
 }
 
 /* hover */
-.list a, .links a, .title a, footer a, .info-link {
+.list a, .links a, .title a, footer a, .info-link, .cv-about a, .services-cta .cta-email a {
   display: inline-block;
   text-decoration: none;
   transition: all 0.3s ease;
   color: inherit;
 }
 
-.list a:hover, .links a:hover, .title a:hover, footer a:hover, .info-link:hover {
+.list a:hover, .links a:hover, .title a:hover, footer a:hover, .info-link:hover, .cv-about a:hover, .services-cta .cta-email a:hover {
   transform: scale(1.05);
 }
 
