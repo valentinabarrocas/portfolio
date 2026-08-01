@@ -1,12 +1,11 @@
 :root {
   --rosa: #e6a5cf;
   --cinza: #555;
-  --preto: #000;
+  --preto: #1a1a1a;
   --col-w: 25vw; 
   --gap: 5vw; 
 }
 
-/* base */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +21,6 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* desktop font */
 .list, .links, .title, .about {
   font-size: clamp(14px, 0.6vw, 32px);
   line-height: 1.4;
@@ -33,7 +31,6 @@ body {
   color: var(--preto) !important;
 }
 
-/* hover */
 .list a, .links a, .title a, footer a, .info-link, .cv-about a, .services-cta .cta-email a {
   display: inline-block;
   text-decoration: none;
@@ -45,7 +42,6 @@ body {
   transform: scale(1.05);
 }
 
-/* coluna 1 */
 .list {
   position: fixed;
   top: 4vw;
@@ -95,7 +91,6 @@ body {
   display: none !important;
 }
 
-/* coluna 2 */
 .project-viewer {
   margin-left: calc(var(--col-w) + var(--gap) + 4vw);
   margin-right: calc(var(--col-w) + var(--gap) + 4vw);
@@ -105,7 +100,6 @@ body {
   min-height: 100vh;
 }
 
-/* acordion */
 @keyframes fadeIn {
   from { 
     opacity: 0; 
@@ -189,7 +183,6 @@ body {
   order: 5;
 }
 
-/* coluna 3 */
 .links { 
   position: fixed;
   top: 4vw; 
@@ -212,7 +205,6 @@ body {
   z-index: 20;
 }
 
-/* footer*/
 footer { 
   position: fixed; 
   bottom: 2vw; 
@@ -222,8 +214,6 @@ footer {
   color: var(--cinza); 
   z-index: 20;
 }
-
-/* ================================ mobile ================================ */
 
 @media (max-width: 1024px) {
 
@@ -282,7 +272,6 @@ footer {
   color: var(--preto) !important;
 }
 
-  /* acordeão mobile */
   .project-item .project-content {
     display: none;
   }
@@ -325,7 +314,6 @@ footer {
   color: var(--cinza) !important;
 }
 
-
   .info-link { 
     font-size: 14px !important; 
     color: var(--preto) !important;
@@ -344,11 +332,9 @@ footer {
   }
 }
 
-/* ================================ auto dark mode ================================ */
-
 @media (prefers-color-scheme: dark) {
   :root {
-  --rosa: #111;
+  --rosa: #1a1a1a;
   --cinza: #555;
   --preto: #e6a5cf;
   }

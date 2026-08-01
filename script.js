@@ -23,7 +23,7 @@ links.forEach(link => {
         links.forEach(l => l.classList.remove('active'));
 
         if (isMobile()) {
-            // ===== mobile: acordeão =====
+            // mobile: acordeão 
 
             todosConteudos.forEach(c => c.classList.remove('is-open'));
 
@@ -40,7 +40,7 @@ links.forEach(link => {
             }
 
         } else {
-            // ===== desktop: move pro viewer central =====
+            // desktop: move pro viewer central
 
             todosConteudos.forEach(conteudo => {
                 const linkOriginal = document.querySelector(
@@ -71,7 +71,7 @@ links.forEach(link => {
     });
 });
 
-// ===== mantém o layout coerente ao cruzar o breakpoint mobile/desktop durante um resize =====
+// mantém o layout coerente ao cruzar o breakpoint mobile/desktop durante um resize
 
 let estavaMobile = isMobile();
 
